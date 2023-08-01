@@ -16,6 +16,7 @@ contract InterchainTokenTest is InterchainToken, Distributable, IERC20BurnableMi
         decimals = decimals_;
         _setDistributor(msg.sender);
         tokenManager = ITokenManager(tokenManager_);
+        _setDomainTypeSignatureHash(name_);
     }
 
     function getTokenManager() public view override returns (ITokenManager) {
