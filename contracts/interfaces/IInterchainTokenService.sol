@@ -20,7 +20,7 @@ interface IInterchainTokenService is ITokenManagerDeployer, IExpressCallHandler,
     error NotCanonicalToken();
     error GatewayToken();
 
-    event TokenSent(bytes32 tokenId, string destinationChain, bytes destinationAddress, uint256 indexed amount, bytes32 sendHahs);
+    event TokenSent(bytes32 tokenId, string destinationChain, bytes destinationAddress, uint256 indexed amount, bytes32 sendHash);
     event TokenSentWithData(
         bytes32 tokenId,
         string destinationChain,
