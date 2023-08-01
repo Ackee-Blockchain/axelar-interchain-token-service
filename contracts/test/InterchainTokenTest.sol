@@ -23,11 +23,11 @@ contract InterchainTokenTest is InterchainToken, Distributable, IERC20BurnableMi
         return tokenManager;
     }
 
-    function mint(address account, uint256 amount) external onlyDistributor {
+    function mint(address account, uint256 amount) external /*onlyDistributor*/ {
         _mint(account, amount);
     }
 
-    function burn(address account, uint256 amount) external onlyDistributor {
+    function burn(address account, uint256 amount) external /*onlyDistributor*/ {
         _burn(account, amount);
     }
 
