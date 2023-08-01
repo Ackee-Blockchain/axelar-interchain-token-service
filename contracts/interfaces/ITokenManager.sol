@@ -14,6 +14,8 @@ interface ITokenManager is ITokenManagerType, IAdminable, IFlowLimit {
     error NotProxy();
     error NotToken();
 
+    function typeOf() external pure returns (TokenManagerType);
+
     function tokenAddress() external view returns (address);
 
     function sendToken(string calldata destinationChain, bytes calldata destinationAddress, uint256 amount) external payable;

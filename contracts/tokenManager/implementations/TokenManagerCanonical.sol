@@ -10,6 +10,8 @@ import { ITokenManager } from '../../interfaces/ITokenManager.sol';
 contract TokenManagerCanonical is TokenManager, InterchainToken {
     using AddressBytesUtils for bytes;
 
+    TokenManagerType public constant override typeOf = TokenManagerType.CANONICAL;
+
     constructor(
         address interchainTokenService_
     )

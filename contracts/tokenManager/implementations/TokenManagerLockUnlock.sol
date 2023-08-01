@@ -8,6 +8,8 @@ import { IERC20 } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interf
 import { SafeTokenTransferFrom, SafeTokenTransfer } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/utils/SafeTransfer.sol';
 
 contract TokenManagerLockUnlock is TokenManagerAddressStorage {
+    TokenManagerType public constant override typeOf = TokenManagerType.LOCK_UNLOCK;
+
     constructor(
         address interchainTokenService_
     )

@@ -11,6 +11,8 @@ contract TokenManagerLiquidityPool is TokenManagerAddressStorage {
     // uint256(keccak256('liquidity-pool-slot')) - 1
     uint256 internal constant LIQUIDITY_POOL_SLOT = 0x8e02741a3381812d092c5689c9fc701c5185c1742fdf7954c4c4472be4cc4807;
 
+    TokenManagerType public constant override typeOf = TokenManagerType.LIQUIDITY_POOL;
+
     constructor(
         address interchainTokenService_
     )

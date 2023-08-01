@@ -9,6 +9,8 @@ import { IERC20 } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interf
 import { SafeTokenCall } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/utils/SafeTransfer.sol';
 
 contract TokenManagerMintBurn is TokenManagerAddressStorage {
+    TokenManagerType public constant override typeOf = TokenManagerType.MINT_BURN;
+
     constructor(
         address interchainTokenService_
     )
